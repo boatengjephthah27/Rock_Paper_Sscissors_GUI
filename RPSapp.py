@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+import random as ran
 
 
 
@@ -36,8 +37,24 @@ label = ttk.Label(app, image=photo)
 label.pack()
 
 
+# building functions for the buttons
+def choiceRock(event):
+    pass
+
+
+def choicePaper(event):
+    pass
+
+
+def choiceScissors(event):
+    pass
+
+
+
 #building the second page from continue button
 def nextpage():
+    c_names = ["Siri", "Bixbi", "Cortana", "Jarvis", "Friday", "Jexi", "Data", "Bishop", "C3PO", "R2D2", "Ava", "T-800", "Alexa"]   
+    comp_name = ran.choice(c_names)
     playpage = tk.Toplevel()
     playpage.iconbitmap("./Assets/RPS_logo.ico")
     screen_width = app.winfo_screenwidth()
@@ -56,9 +73,9 @@ def nextpage():
     space.grid(row=1)
     space = ttk.Label(playpage, text="  ")
     space.grid(row=2)
-    plabel = tk.Label(playpage, text="Player: ", font=("Georgia", "20", "bold"))
+    plabel = tk.Label(playpage, text=f"Player: {p_name}", font=("Georgia", "20", "bold"))
     outlabel = tk.Label(playpage, text="Outcome: ", font=("Georgia", "20", "bold"))
-    clabel = tk.Label(playpage, text="Computer: ", font=("Georgia", "20", "bold"))
+    clabel = tk.Label(playpage, text=f"Computer: {comp_name}", font=("Georgia", "20", "bold"))
     plabel.grid(row=3, column=0)
     outlabel.grid(row=3, column=1)
     clabel.grid(row=3, column=2)
@@ -101,6 +118,14 @@ def nextpage():
     signature = ttk.Label(playpage, text="© App by: Boateng Jephthah Agyenim", font=("Signatura","7"))
     signature.grid(row=16, column=1)
 
+    # binding keys to the buttons
+    rbutton.bind("<R>", choiceRock)
+    rbutton.bind("<r>", choiceRock)
+    pbutton.bind("<P>", choicePaper)
+    pbutton.bind("<p>", choicePaper)
+    sbutton.bind("<S>", choiceScissors)
+    sbutton.bind("<s>", choiceScissors)
+
 
     
 
@@ -117,6 +142,7 @@ name.grid(row=0, column=0)
 name_entry.grid(row=2, column=0)
 nameFrame.pack()
 name_entry.bind('<Key-Return>', npage)
+p_name = name_entry.get()
 
 # creating the continue button
 continueButton = ttk.Button(text="Continue", command=nextpage)
