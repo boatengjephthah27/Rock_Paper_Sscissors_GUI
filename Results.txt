@@ -1,0 +1,18 @@
+
+polpo --:  
+        Paper           |        c_rock            |        2022-08-11 (12:17:25.367176)        |        Won
+        Scissors        |        c_paper           |        2022-08-11 (12:17:28.626666)        |        Won
+        Rock            |        c_scissors        |        2022-08-11 (12:17:29.605902)        |        Won
+        Paper           |        c_scissors        |        2022-08-11 (12:17:30.987960)        |        Lost
+        Scissors        |        c_scissors        |        2022-08-11 (12:17:32.054842)        |        Drawed
+        Rock            |        c_paper           |        2022-08-11 (12:17:32.704891)        |        Lost
+        Paper           |        c_rock            |        2022-08-11 (12:17:33.447611)        |        Won
+        Scissors        |        c_rock            |        2022-08-11 (12:17:34.159454)        |        Lost
+        Rock            |        c_paper           |        2022-08-11 (12:17:34.683897)        |        Lost
+        Rock            |        c_rock            |        2022-08-11 (12:17:35.224404)        |        Drawed
+        Rock            |        c_scissors        |        2022-08-11 (12:17:35.709851)        |        Won
+        Rock            |        c_rock            |        2022-08-11 (12:17:36.185602)        |        Drawed
+        Rock            |        c_scissors        |        2022-08-11 (12:17:36.639419)        |        Won
+        Rock            |        c_scissors        |        2022-08-11 (12:17:37.088461)        |        Won
+        Paper           |        c_rock            |        2022-08-11 (12:17:38.174851)        |        Won
+        Paper           |        c_paper           |        2022-08-11 (12:17:38.606657)        |        Drawed

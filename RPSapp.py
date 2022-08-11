@@ -1,8 +1,6 @@
-from cgitb import text
 from tkinter import *
-import random as ran
+import random as ran, datetime as dt
 from tkinter import messagebox
-import time as t
 
 
 
@@ -16,7 +14,6 @@ c_choice = None
 score_win = 0
 score_lose = 0
 score_draw = 0
-
 
 
 
@@ -151,6 +148,16 @@ def win():
             text = f"Wins: {score_win}"
         )
         
+        
+    now = dt.datetime.now()
+    date = now.date()
+    time = now.time()
+    
+    with open("Results.txt", "a") as file:
+        file.write(
+            f"\n        {p_choice}        |        {c_choice}        |        {date} ({time})        |        Won"
+        )
+                
     output.bind('<Return>', lambda event: dest())
 
     
@@ -214,6 +221,15 @@ def lose():
             text = f"Losses: {score_lose}"
         )
         
+    now = dt.datetime.now()
+    date = now.date()
+    time = now.time()
+    
+    with open("Results.txt", "a") as file:
+        file.write(
+            f"\n        {p_choice}        |        {c_choice}        |        {date} ({time})        |        Lost"
+        )
+
         
     output.bind('<Return>', lambda event: dest())
 
@@ -270,6 +286,15 @@ def draw():
             text = f"Draws: {score_draw}"
         )
         
+    now = dt.datetime.now()
+    date = now.date()
+    time = now.time()
+    
+    with open("Results.txt", "a") as file:
+        file.write(
+            f"\n        {p_choice}        |        {c_choice}        |        {date} ({time})        |        Drawed"
+        )
+        
     output.bind('<Return>', lambda event: dest())
 
     
@@ -284,6 +309,11 @@ def record():
             message="Fill in the Player Name!" 
         )
     else:
+        p_name = name.get()
+        with open("Results.txt", "a") as file:
+            file.write(
+                f"\n{p_name} --:  "     
+            )    
         fpage.destroy()
 
 
@@ -291,14 +321,14 @@ def record():
 
 def choiceRock():
     global p_choice
-    p_choice = "Rock"
+    p_choice = "Rock    "
     canvas1.itemconfig(p_image, image=prock)
         
     check()
 
-    if c_choice == "c_rock":
+    if c_choice == "c_rock    ":
         draw()
-    elif c_choice == "c_paper":
+    elif c_choice == "c_paper   ":
         lose()
     elif c_choice == "c_scissors":
         win()
@@ -308,14 +338,14 @@ def choiceRock():
 
 def choicePaper():
     global p_choice
-    p_choice = "Paper"
+    p_choice = "Paper   "
     canvas1.itemconfig(p_image, image=ppaper)
 
     check()    
     
-    if c_choice == "c_rock":
+    if c_choice == "c_rock    ":
         win()
-    elif c_choice == "c_paper":
+    elif c_choice == "c_paper   ":
         draw()
     elif c_choice == "c_scissors":
         lose()
@@ -330,9 +360,9 @@ def choiceScissors():
 
     check()
     
-    if c_choice == "c_rock":
+    if c_choice == "c_rock    ":
         lose()
-    elif c_choice == "c_paper":
+    elif c_choice == "c_paper   ":
         win()
     elif c_choice == "c_scissors":
         draw()
@@ -341,11 +371,11 @@ def choiceScissors():
 def check():
     
     global c_choice
-    c_choice = ran.choice(["c_rock", "c_paper", "c_scissors"])
+    c_choice = ran.choice(["c_rock    ", "c_paper   ", "c_scissors"])
     
-    if c_choice == "c_rock":
+    if c_choice == "c_rock    ":
         canvas2.itemconfig(com_image, image=comrock)
-    elif c_choice == "c_paper":
+    elif c_choice == "c_paper   ":
         canvas2.itemconfig(com_image, image=compaper)
     else:
         canvas2.itemconfig(com_image, image=comscissors)
