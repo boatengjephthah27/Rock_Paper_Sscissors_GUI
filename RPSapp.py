@@ -1,5 +1,6 @@
 from tkinter import *
 import random as ran
+from tkinter import messagebox
 
 
 
@@ -27,6 +28,84 @@ c_choice = None
 
 
 
+
+
+
+def page1():
+    global fpage
+    fpage = Toplevel(app)
+    fpage.title("Rock Paper Scissors")
+    fpage.iconbitmap("./Assets/RPS_logo.ico")
+    fpage.config(padx=50, pady=60)
+
+    screen_width = fpage.winfo_screenwidth()
+    screen_height = fpage.winfo_screenheight()
+    window_height = 750
+    window_width = 883
+    width_center = int(screen_width/2 - window_width/2)
+    height_center = int(screen_height/2 - window_height/2)
+    window_position = fpage.geometry(f"{window_width}x{window_height}+{width_center}+{height_center}")
+    fpage.resizable(False, False)
+    
+    canvas = Canvas(
+        fpage,
+        width=792,
+        height=532,
+    )
+    canvas.create_image(
+        396,286,
+        image = photo
+    )
+    canvas.grid(row=0, column=0)
+    
+    global name
+    name = Entry(
+        fpage,
+        width=30,
+        font=("courier", 24, "bold"),
+        bg="black",
+        fg="white",
+        border=0
+        
+    )
+    name.grid(row=2, column=0)
+    
+    namelabel = Label(
+        fpage,
+        text="Player Name",
+        font=("courier", 24, "bold"),
+    )
+    namelabel.grid(row=1, column=0)
+    
+    continuebtn = Button(
+        fpage,
+        text="Continue",
+        pady=5,
+        command=record
+    )
+    continuebtn.grid(row=3, column=0)
+    
+    fpage.bind('<Return>', lambda event: record())
+    
+    signature = Label(
+        fpage,
+        text="© App by: Boateng Jephthah Agyenim", 
+        font=("Signatura",14),
+        pady=20
+    )
+    signature.grid(row=4, column=0)
+
+
+
+def record():
+    
+    if len(name.get()) < 1:
+        messagebox.showwarning(
+            "Player Name",
+            message="Fill in the Player Name!" 
+        )
+    else:
+        fpage.destroy()
 
 
 def choiceRock():
@@ -77,6 +156,7 @@ pscissors = PhotoImage(file="./Assets/player_scissors.png")
 comrock = PhotoImage(file="./Assets/com_rock.png")
 compaper = PhotoImage(file="./Assets/com_paper.png")
 comscissors = PhotoImage(file="./Assets/com_scissors.png")
+photo = PhotoImage(file="./Assets/RPS_logo.png")
 
 
 
@@ -99,7 +179,7 @@ comlabel.grid(row=0, column=2)
 canvas1 = Canvas(
     width=220,
     height=300,
-    # highlightthickness= 0
+    highlightthickness= 0
 )
 canvas1.create_image(
     110,150,
@@ -119,7 +199,7 @@ vs_label.grid(row=1, column=1)
 canvas2 = Canvas(
     width=220,
     height=220,
-    # highlightthickness= 0
+    highlightthickness= 0
 )
 canvas2.create_image(
     110,110,
@@ -152,6 +232,13 @@ sbutton = Button(
     pady=20
 )
 sbutton.grid(row=2, column=2)
+
+signature = Label(
+    text="© App by: Boateng Jephthah Agyenim", 
+    font=("Signatura",14),
+    pady=50
+)
+signature.grid(row=4, column=1)
 
 
 
@@ -289,7 +376,7 @@ sbutton.grid(row=2, column=2)
 
 
 
-
+page1()
 
 
 
