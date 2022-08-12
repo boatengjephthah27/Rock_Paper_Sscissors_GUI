@@ -16,3 +16,28 @@ polpo --:
         Rock            |        c_scissors        |        2022-08-11 (12:17:37.088461)        |        Won
         Paper           |        c_rock            |        2022-08-11 (12:17:38.174851)        |        Won
         Paper           |        c_paper           |        2022-08-11 (12:17:38.606657)        |        Drawed
+kwam --:  
+        Paper           |        c_paper           |        2022-08-12 (09:36:48.055215)        |        Drawed
+        Rock            |        c_rock            |        2022-08-12 (09:36:54.432096)        |        Drawed
+        Scissors        |        c_paper           |        2022-08-12 (09:37:02.032636)        |        Won
+        Paper           |        c_scissors        |        2022-08-12 (09:37:09.873362)        |        Lost
+        Rock            |        c_rock            |        2022-08-12 (09:37:13.466482)        |        Drawed
+        Paper           |        c_paper           |        2022-08-12 (09:37:19.021249)        |        Drawed
+        Scissors        |        c_scissors        |        2022-08-12 (09:37:25.045474)        |        Drawed
+        Rock            |        c_rock            |        2022-08-12 (09:37:28.955771)        |        Drawed
+        Rock            |        c_scissors        |        2022-08-12 (09:37:37.185206)        |        Won
+        Rock            |        c_paper           |        2022-08-12 (09:37:41.626988)        |        Lost
+        Rock            |        c_paper           |        2022-08-12 (09:37:45.320063)        |        Lost
+        Rock            |        c_rock            |        2022-08-12 (09:37:48.246520)        |        Drawed
+        Rock            |        c_rock            |        2022-08-12 (09:37:53.549946)        |        Drawed
+        Paper           |        c_scissors        |        2022-08-12 (09:37:56.855092)        |        Lost
+        Paper           |        c_scissors        |        2022-08-12 (09:37:59.682020)        |        Lost
+        Paper           |        c_scissors        |        2022-08-12 (09:38:02.683181)        |        Lost
+        Paper           |        c_rock            |        2022-08-12 (09:38:05.770125)        |        Won
+        Rock            |        c_scissors        |        2022-08-12 (09:38:08.530347)        |        Won
+        Rock            |        c_paper           |        2022-08-12 (09:38:11.633031)        |        Lost
+        Rock            |        c_rock            |        2022-08-12 (09:38:15.055167)        |        Drawed
+        Rock            |        c_scissors        |        2022-08-12 (09:38:18.075472)        |        Won
+        Rock            |        c_scissors        |        2022-08-12 (09:38:21.295765)        |        Won
+        Rock            |        c_scissors        |        2022-08-12 (09:38:24.457894)        |        Won
+        Rock            |        c_paper           |        2022-08-12 (09:38:28.289732)        |        Lost

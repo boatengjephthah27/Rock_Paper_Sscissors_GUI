@@ -73,7 +73,7 @@ def page1():
     
     namelabel = Label(
         fpage,
-        text="Player Name",
+        text="Player Name:",
         font=("courier", 24, "bold"),
     )
     namelabel.grid(row=1, column=0)
